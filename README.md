@@ -23,15 +23,15 @@ This application provides an interactive interface to test and compare three ver
 ### 1. Chatbot
 Interactive chat interface using the Data-Centric model. Have conversations and test the model's conversational abilities.
 
-### 2. Adaptive Tone Chat
-A chatbot that adapts its personality and communication style based on your selection. Choose from:
+### 2. Text Rewriter
+Transform and rewrite your text in different styles and tones. Choose from:
 - **Gen-Z**: Casual slang, modern internet culture, relatable vibes
 - **Formal Corporate**: Professional business language, polished and concise
 - **Academic**: Scholarly discourse, intellectual rigor, educational depth
 - **Humorous**: Witty jokes, wordplay, entertaining responses
 - **Teacher Mode**: Patient explanations, step-by-step breakdowns, supportive guidance
 
-This feature demonstrates the fine-tuned model's ability to adjust its tone and style through prompt engineering.
+This feature demonstrates the fine-tuned model's ability to adapt writing style through prompt engineering. Perfect for content creators, students, and professionals who need to adjust their message for different audiences.
 
 ### 3. Batch Model Comparison
 Compare all three models using perplexity metrics. Requires text with at least 1024 tokens (~750-800 words). Includes pre-filled sample text for immediate testing.
