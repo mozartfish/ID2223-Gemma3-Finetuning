@@ -50,8 +50,8 @@ Evaluate models on specific tasks:
 
 - **Frontend**: Gradio
 - **Backend**: Python 3.10
-- **LLM Runtime**: llama.cpp (optimized C++ inference)
-- **Models**: GGUF quantized models (Q8_0 format)
+- **LLM Runtime**: llama.cpp
+- **Models**: GGUF quantized models
 - **Deployment**: Docker container
 
 
