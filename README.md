@@ -6,3 +6,69 @@ Finetuning Gemma3 1B (text-only) models on the finetome instruction dataset usin
 `Data-Centric` - [Model Repo](https://huggingface.co/mozartfish/Gemma3-FineTome30K-data-centric) | [Demo](https://huggingface.co/spaces/tanudin/lab2_docker_version)
 
 `Model-Centric` - [Model Repo](https://huggingface.co/mozartfish/Gemma3-FineTome10K-model-centric) | [Demo](https://huggingface.co/spaces/tanudin/lab2_docker_version)
+
+# Gemma-3 Fine-Tuned LLM Evaluation App
+
+A comprehensive Gradio-based web application for interacting with and evaluating fine-tuned Gemma-3 language models.
+
+## Overview
+
+This application provides an interactive interface to test and compare three versions of fine-tuned Gemma-3 models:
+- **Baseline (10K)**: Trained on 10,000 samples
+- **Model-Centric (10K)**: Trained on 10,000 samples with optimized hyperparameters
+- **Data-Centric (30K)**: Trained on 30,000 high-quality samples
+
+## Features
+
+### 1. Chatbot
+Interactive chat interface using the Data-Centric model. Have conversations and test the model's conversational abilities.
+
+### 2. Adaptive Tone Chat
+A chatbot that adapts its personality and communication style based on your selection. Choose from:
+- **Gen-Z**: Casual slang, modern internet culture, relatable vibes
+- **Formal Corporate**: Professional business language, polished and concise
+- **Academic**: Scholarly discourse, intellectual rigor, educational depth
+- **Humorous**: Witty jokes, wordplay, entertaining responses
+- **Teacher Mode**: Patient explanations, step-by-step breakdowns, supportive guidance
+
+This feature demonstrates the fine-tuned model's ability to adjust its tone and style through prompt engineering.
+
+### 3. Batch Model Comparison
+Compare all three models using perplexity metrics. Requires text with at least 1024 tokens (~750-800 words). Includes pre-filled sample text for immediate testing.
+
+### 4. Speed Benchmark
+Measure and compare generation speed (tokens per second) across all three models. Helps identify which model is fastest for production use.
+
+### 5. Task Testing
+Evaluate models on specific tasks:
+- **Math**: Calculations and numerical reasoning
+- **Reasoning**: Logical thinking and problem-solving
+- **Summarization**: Text condensation skills
+- **Code**: Programming ability
+
+## Technology Stack
+
+- **Frontend**: Gradio
+- **Backend**: Python 3.10
+- **LLM Runtime**: llama.cpp (optimized C++ inference)
+- **Models**: GGUF quantized models (Q8_0 format)
+- **Deployment**: Docker container
+
+
+## Key Parameters
+
+Adjust these sliders in the UI:
+- **Temperature** (0-2): Controls randomness. Lower = more focused, Higher = more creative
+- **Top-p** (0-1): Nucleus sampling. Controls diversity of outputs
+- **Max Tokens** (32-1024): Maximum length of generated responses
+
+## Evaluation Metrics
+
+### Perplexity (Lower is Better)
+Measures how well the model predicts text. Lower perplexity indicates better language modeling.
+
+### Tokens/Second (Higher is Better)
+Measures generation speed. Important for production deployment and user experience.
+
+### Qualitative Comparison
+Task testing allows manual evaluation of response quality, coherence, and accuracy.
