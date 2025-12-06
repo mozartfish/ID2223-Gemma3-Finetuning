@@ -72,3 +72,40 @@ Measures generation speed. Important for production deployment and user experien
 
 ### Qualitative Comparison
 Task testing allows manual evaluation of response quality, coherence, and accuracy.
+
+## Finetuning Stategy 
+
+### Baseline 
+
+first 10K samples from Finetome instruction dataset 
+
+- r = 8 
+- Lora_alpha = 8 
+- Lora_dropout = 0 
+- Warmup_steps = 5 
+- Num epochs = 3 
+- Learning rate = 2e-4 
+- Weight decay = 0.001 
+
+### Data Centric
+
+30K samples from Finetome instruction dataset. selected instructions 50,000-80,000 to ensure no overlap with training data used in baseline. 
+
+- r = 8 
+- Lora_alpha = 8 
+- Lora_dropout = 0 
+- Warmup_steps = 5 
+- Num epochs = 1
+- Learning rate = 2e-4 
+- Weight decay = 0.001 
+
+### Model Centric 
+
+10K samples from Finetome instruction dataset but with optimized hyperparameters -> adjusted decay, peanlty, warmup steps
+- r = 16
+- Lora_alpha = 32 
+- Lora_dropout = 0.05
+- Warmup_steps = 50
+- Num epochs = 3 
+-  Learning rate = 1e-4
+-  Weight decay = 0.01 
